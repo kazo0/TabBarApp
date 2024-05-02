@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "TabBarApp",
+  "display": "standalone",
+  "name": "TabBarApp",
+  "short_name": "TabBarApp",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}
