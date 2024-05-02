@@ -5,11 +5,39 @@
 	  xmlns:utu="using:Uno.Toolkit.UI"
 	  xmlns:um="using:Uno.Material"
 	  Background="{ThemeResource BackgroundBrush}">
-	<StackPanel utu:SafeArea.Insets="VisibleBounds"
-				HorizontalAlignment="Center"
-				VerticalAlignment="Center">
-		<TextBlock AutomationProperties.AutomationId="HelloTextBlock"
-				   Text="Hello Uno Platform"
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<utu:NavigationBar Content="TabBarApp" />
+		<utu:TabBar Style="{StaticResource TopTabBarStyle}"
+					Grid.Row="1"
+					VerticalAlignment="Top">
+			<utu:TabBarItem Content="Item 1" IsSelected="True" />
+			<utu:TabBarItem Content="Item 2" />
+			<utu:TabBarItem Content="Item 3" />
+		</utu:TabBar>
+
+		<TextBlock Text="Hello Uno Platform"
+				   Grid.Row="2"
+				   VerticalAlignment="Center"
 				   HorizontalAlignment="Center" />
-	</StackPanel>
+
+		<utu:TabBar Style="{StaticResource BottomTabBarStyle}"
+					Grid.Row="3"
+					VerticalAlignment="Bottom">
+			<utu:TabBarItem Content="Home"
+							Icon="Home"
+							IsSelected="True" />
+			<utu:TabBarItem Content="Calls"
+							Icon="Phone" />
+			<utu:TabBarItem Content="Settings"
+							Icon="Setting" />
+		</utu:TabBar>
+
+	</Grid>
 </Page>
