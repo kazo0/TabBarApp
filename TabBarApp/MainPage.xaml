@@ -18,6 +18,8 @@
 			<utu:TabBarItem Icon="Home"
 							Content="Home" />
 			<utu:TabBarItem Icon="Phone"
+							BadgeValue="2"
+							BadgeVisibility="Visible"
 							Content="Calls" />
 			<utu:TabBarItem Icon="Setting"
 							Content="Settings" />
