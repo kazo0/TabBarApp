@@ -40,8 +40,4 @@
       Toolkit;
     </UnoFeatures>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="Styles\" />
-  </ItemGroup>
-
 </Project>

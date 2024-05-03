@@ -9,48 +9,18 @@
 	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
-			<RowDefinition Height="Auto" />
 			<RowDefinition Height="*" />
-			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
 		<utu:NavigationBar Content="TabBarApp" />
-		<utu:TabBar Style="{StaticResource TopTabBarStyle}"
-					SelectionChanged="TopTabSelectionChanged"
-					Grid.Row="1"
-					VerticalAlignment="Top">
-			<utu:TabBarItem Content="Item 1"
-							IsSelected="True" />
-			<utu:TabBarItem Content="Item 2" />
-			<utu:TabBarItem Content="Item 3" />
-		</utu:TabBar>
-
-		<StackPanel VerticalAlignment="Center"
-					HorizontalAlignment="Center"
-					Grid.Row="2">
-			<TextBlock Text="Top Tab: ">
-				<TextBlock.Inlines>
-					<Run x:Name="TopTab" />
-				</TextBlock.Inlines>
-			</TextBlock>
-
-			<TextBlock Text="Bottom Tab: ">
-				<TextBlock.Inlines>
-					<Run x:Name="BottomTab" />
-				</TextBlock.Inlines>
-			</TextBlock>
-		</StackPanel>
 		<utu:TabBar Style="{StaticResource BottomTabBarStyle}"
-					SelectionChanged="BottomTabSelectionChanged"
-					Grid.Row="3"
-					VerticalAlignment="Bottom">
-			<utu:TabBarItem Content="Home"
-							Icon="Home"
-							IsSelected="True" />
-			<utu:TabBarItem Content="Calls"
-							Icon="Phone" />
-			<utu:TabBarItem Content="Settings"
-							Icon="Setting" />
+					VerticalAlignment="Bottom"
+					Grid.Row="1">
+			<utu:TabBarItem Icon="Home"
+							Content="Home" />
+			<utu:TabBarItem Icon="Phone"
+							Content="Calls" />
+			<utu:TabBarItem Icon="Setting"
+							Content="Settings" />
 		</utu:TabBar>
-
 	</Grid>
 </Page>
